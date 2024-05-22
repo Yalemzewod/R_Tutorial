@@ -1,0 +1,224 @@
+---
+title: "Tutorial 1: Introduction to R and RStudio"
+author: "Yalemzewod Gelaw"
+toc: true
+toc-depth: 2
+number-sections: false
+highlight-style: github
+format:
+  html:
+    self-contained: true
+    code-fold: true
+    code-summary: "Show the code"
+    code-tools: true
+    theme: united 
+knitr: 
+ opts_knit: 
+   warning: false
+   message: false
+editor: visual
+---
+
+## R and Rstudio ?
+
+R?
+
+:   A free statistical software used in data analysis and data science. It's especially powerful for performing advanced statistical computing and creating compelling plots.
+
+    In simpler words, it's like a toolbox for working with data, where you can perform various tasks related to data analysis and visualization.
+
+    -   Free and open sources
+
+    -   Large supportive community - [Stack overflow](https://stackoverflow.co/)
+
+    -   Flexiable and user friendly - over 18,000 packages
+
+Rstudio?
+
+:   A user-friendly interface for programming in R - a graphical front-end that makes it easier to work with R.
+
+    R studio offers:
+
+    -   User-friendly Interface - four panel
+
+    -   Reusable scripts - write and save reusable script
+
+    -   Data and object management - easily access all the imported data and created objects
+
+    -   Project Organization
+
+    -   Plot previewing
+
+## Why should you learn R?
+
+-   Learning R equips you with statistical skills, visualization skills, and a chance to exciting career opportunities. Whether you're a data enthusiast or a seasoned programmer, R is worth exploring
+
+## Installing R
+
+To start working in Rstudio, we need to first download and install the R programming language. Installing R and RStudio is straightforward. Let's walk through the steps:
+
+**Step 1**: Go to the website - [Comprehensive R Archive Network Website](https://cran.r-project.org/) (CRAN).
+
+**Step 2**: Choose operating system and click on the Download R-4.4.0 for Windows. Double click on the installer to launch it.
+
+[![](download.png){fig-align="center"}](Window%20Operating%20System)
+
+**Step 3**:  Select the language of your choice in the installer and click **OK**.
+
+![](Install.png)
+
+**Step 4:** Clicking on Next will lead you to the important information of the license. Click on **Next**.
+
+![](license.png)
+
+**Select 5**: Selecting the destinations
+
+![](Destination.png)
+
+**Step 6**: Selecting the components
+
+![](Select%20all%20componenets%20.png)
+
+**Step 7:** In this step, you will be directed to customize the start up. Click No (accept defaults)
+
+![](Accept%20defaults.png)
+
+**Step 8 :** In this step, you will be directed to select the start menu folder.
+
+![](Create_start.png)
+
+**Step 9** : You will be asked to choose the additional tasks. Check the registry entries options if you wouldn't like to add your installation as a quick launch and desktop shortcut.
+
+![](additional%20task.png)
+
+**Step 10**: The final step will prompt you to installing R. Wait for the installation to complete and click finsih
+
+![](installing2.png)
+
+## Installing RStudio
+
+**Step 1**: Go to the Rstudio website
+
+-   Visit [Rstudio Desktop](https://posit.co/download/rstudio-desktop/) website in your web browser.
+
+**Step 2**: Download Rstudio for Windows.
+
+-   Click the *window* version of RStudio.
+
+![](Rstudio_desktop.png)
+
+**Step 3**. Run the installer.
+
+-   Once the **`.exe`** file is downloaded, locate in your downloads folder and double click to run it. Follow the installation instructions provided by the installer.
+
+![](Rstudio_welcome.PNG)
+
+**Step 3.1.** Choose installation path
+
+-   You will be prompted to select the installation path. By default it will be the "Program Files" folder on the C desk. Click ***Next*** to proceed or choose different folder to start.
+
+![](Rstudio_choose_install_loca.PNG)
+
+**Step 3.2.** Select the Start Menu Folder
+
+-   Choose the folder where you want Rstudio to appear in the Start Menu. Creating a shortcut is optional.
+
+![](Rstudio_choose_star.PNG)
+
+**Step 3.3**. Complete Installation
+
+-   Wait for the installation process to finish, then click "Finish" to complete the process
+
+![](Rstudio_install.PNG)
+
+Once you've completed these steps, RStudio should be successfully installed on your Windows system, and you can start using it for your data analysis and programming tasks. ***Well done! Let's explore RStudio in panels.***
+
+## Introduction to RStudio.
+
+**Common features**
+
+Once you open files, you will see three panels: Console, Environment and Output.
+
+**Console**:
+
+-   The console pane is where we interact with R directly.
+
+-   We can type and execute R commands here, and it displays the output of those commands.
+
+-   It's a powerful tool for testing code snippets, exploring data, and debugging.
+
+![](console.png)
+
+**Environment pane**:
+
+-   The **`Environment`** tab shows your loaded variables and their values.
+
+    ![](environment.png)
+
+**Output pane**:
+
+-   **`Files`**: Displays your project files and directories.
+
+-   **`Plots`**: Shows graphical plots generated by R.
+
+-   **`Packages`**: Lists installed R packages.
+
+-   **`Help`**: Provides access to R documentation.
+
+-   **`Viewer`**: Displays HTML content.
+
+-   **`Presentation`**: Useful for creating slideshows or presentations.
+
+![](file_output.png)
+
+**Source pane**:
+
+-   This is the top-left panel to view and edit various code-related files.
+
+-   It allows us to work with files like `.R, .rmd, .qmd, .py, .css`, or general text files such as `.txt or .md`.
+
+-   Each additional file you open will appear as a new tab within the Source panel.
+
+    ![](source.png)
+
+**The RStudio Project**
+
+-   It's good practice to create an RStudio Project when performing data analysis. This allows you to organise your projects into different tasks or context. Each project has their own working directory, workspace, history and scripts.
+
+How to create a project ?
+
+1\. Click on File \> New Project
+
+2.  Click on New Directory \> Empty Project
+
+3\. Type in a name for your project directory, e.g. Intro_to_R_project
+
+4\. Click on Create Project
+
+![](projecct.png)
+
+**Customize the user interface**
+
+RStudio support customizing the layout of the panels and the user interface.
+
+How to customizing the appearance of the user interface?
+
+1.  Click on Tools \> Global Options
+2.  Click on Appearance \> Editor fonts, Editor font size
+
+Customizing the layout of the panels
+
+1.  Click on Tools \> Global Options
+2.  Click on Pane Layout \> move the position
+
+![](Global.png)
+
+Let's practice it!
+
+![**አመሰግናለው**](InstallingR.jpg)
+
+## Learn more[^1][^2]
+
+[^1]: How to Install R, RStudio and R Packages - The Easiest Process Ever! - DataFlair (data-flair.training)
+
+[^2]: Install R and RStudio -- A Step-by-Step Guide for Beginners: Install R and RStudio - A Step-by-Step Guide for Beginners - TechVidvan

@@ -1,0 +1,49 @@
+---
+title: "Introduction to R and RStudio"
+author: "Yalemzewod Gelaw"
+date: "2024/05/24"
+format: 
+  revealjs:
+    incremental: false
+---
+
+## What is R Programming Language?
+
+-   R is an open source programming language used for statistical computing.
+
+-   A toolbox for working with data, where you can perform various tasks related to data analysis and visualization.
+
+## **Rstudio?**
+
+A user-friendly interface for programming in R - a graphical front-end that makes it easier to work with R.
+
+R studio offers:
+
+-   User-friendly Interface
+
+-   Four panel
+
+-   Write and save reusable script
+
+-   Easily access all the imported data and created objects
+
+-   Project OrganizationPlot previewing
+
+## Arithmetic operators
+
+|                  |            |
+|------------------|------------|
+| addition         | x + y      |
+| subtraction      | x - y      |
+| division         | x/y        |
+| multiplication   | x\*y       |
+| reminder/modulus | x%y        |
+| exponent         | x\^2/x\*\* |
+
+## Code
+
+When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+1 + 1
+```

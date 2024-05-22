@@ -1,0 +1,333 @@
+---
+title: "Introduction to Rstudio"
+author: "Yalemzewod Gelaw"
+toc: true
+toc-depth: 2
+number-sections: false
+highlight-style: github
+format:
+  html:
+    self-contained: true
+    code-fold: true
+    code-summary: "Show the code"
+    code-tools: true
+    theme: united 
+knitr: 
+ opts_knit: 
+   warning: false
+   message: false
+editor: visual
+---
+
+::: callout-note
+# What's in it for you?
+
+-   Overview of RStudio
+
+-   Variable and data types
+
+-   Operators in R
+:::
+
+## Overview
+
+The basic layout of RStudio will have three panels
+
+-   Console (entire left) - the interactive panel where we can type and execute R commands and it displays the output of those commands
+
+-   Environment/History/Connections (tabbed in upper right) - shows loaded variables and their values
+
+-   Files/Plots/Packages/Help/Viewer (tabbed in lower right) - displays project files and directories, show plots, list installed packages, provide access to R documentation
+
+## Project management in Rstudio
+
+In RStudio, a project is a self-contained environment that manages all the files associated with a particular set of analyses or tasks. It's a powerful tool for organizing your work, maintaining reproducibility, and simplifying collaboration.
+
+::: {.callout-note appearance="simple"}
+## Steps to set up
+
+1.  Create a New Project:
+
+-   Click on `File` \> `New Project`
+
+-   Choose `New Directory` for a new project or `Existing Directory` if you want to associate the project with an already existing folder.
+
+-   Follow the prompt to name your project and choose its location on your computer.
+
+2.  Open Existing Project:
+
+-   Navigate to the project directory and open the `.Rproj` file
+
+3.  Using Version Control:
+
+-   During the project creation, you can also initialize a Git repository if you want to use version control, which is highly recommended for tracking changes and collaborating with others.
+:::
+
+Once a project is set up, RStudio will automatically set your working directory to the project's root folder each time you open it, which is incredibly convenient for file management and relative paths in your code.
+
+## Set working directory
+
+Set working directory is to tell R where to look for files and where to save outputs.
+
+::: callout-note
+To set working directory - which is the folder where your R session is focused - you can use the following method
+
+1.  Using the `setwd()` function:
+
+Type ``` setwd("path/to/your/directory") and replace '``path/to/your/directory' with the actual path to your folder. Make sure to use forward slashes / or double slashes in your path ```
+
+2.  You can also use the graphic interface:
+
+-   Go to the **Session** menu at the top of RStudio.
+
+-   Choose **Set Working Directory**.
+
+-   Select **Choose Directory...** and navigate to the folder you want to set as your working directory.
+
+    ![](images/set_working.png)
+:::
+
+```{r,Set_working, eval=FALSE}
+path = "C:/Users/User/Documents/R_training"
+setwd(path) # tell R to access the file from 'R_training' folder
+getwd() # check the file folder
+```
+
+## Operators in R
+
+Basic arithmetic and logical operators to perform mathematical operations and expressions in R are:
+
++---------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Operators                 | Example                                                                                                                                                                                      |
++===========================+==============================================================================================================================================================================================+
+| \+ addition               | Add two numbers `x + y`                                                                                                                                                                      |
++---------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| \- subtraction            | Subtracts one number from the other `x - y`                                                                                                                                                  |
++---------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| / division                | Divides one number by another `x/y`                                                                                                                                                          |
++---------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| %% reminder/modulus       | Reminder of the devision of one number by another `x%%y`                                                                                                                                     |
++---------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| \^ exponent               | Raises a number to the power of another `x^2`                                                                                                                                                |
++---------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| \< Less than              | | `x < y` a logical comparison that checks if each element of the vector `x` is less than the corresponding elements of the vector `y`. The results are **TRUE** or **FALSE**.               |
++---------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| \<= less than or equal to | `x <= y` a logical comparison that checks if each element of the vector `x` is less than or equal to the corresponding elements of the vector `y`. The results are **TRUE** or **FALSE**.    |
++---------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| \> Greater than           | `x > y` a logical comparison that checks if each element of the vector `x` is greater than to the corresponding elements of the vector `y`. The results are **TRUE** or **FALSE**.           |
++---------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| \>= Greater than          | `x >= y` a logical comparison that checks if each element of the vector `x` is greater than or equal to the corresponding elements of the vector `y`. The results are **TRUE** or **FALSE**. |
++---------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| == Equal to               | `x == y` a logical comparison that checks if each element of the vector `x` is equal to the corresponding elements of the vector `y`. The results are **TRUE** or **FALSE**.                 |
++---------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| = /\<- Assign variable    | | **\<**- A common assignment operator in R. It used to assign values to variables.                                                                                                          |
+|                           | | `x <- 10`                                                                                                                                                                                  |
+|                           | | `Z <- c(1, 2, 3, 4, 5)`                                                                                                                                                                    |
+|                           | | **=** also used for assignment in R and works similarly to **\<-**                                                                                                                         |
+|                           | | `x = 10`                                                                                                                                                                                   |
+|                           | | `Z = "Hello, World"`                                                                                                                                                                       |
++---------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| != Not equal to           | | *!=* used for inequality comparison and returns a logical vector of **TRUE** or **FALSE**                                                                                                  |
+|                           | | x != y                                                                                                                                                                                     |
++---------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| & AND                     | & used for element-wise logical "AND". It returns TRUE only if both corresponding elements of the operator are TRUE.                                                                         |
+|                           |                                                                                                                                                                                              |
+|                           | | `x <- c(TRUE, FALSE, TRUE, FALSE)`                                                                                                                                                         |
+|                           | | `y <- c(TRUE, TRUE, FALSE, FALSE)`                                                                                                                                                         |
+|                           | |  `result <- x & y`                                                                                                                                                                         |
+|                           | | \[1\] TRUE FALSE FALSE FALSE\`                                                                                                                                                             |
++---------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| \| OR                     | \| used for element-wise logical "OR". It returns TRUE if either corresponding elements of the operator are TRUE.                                                                            |
++---------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ! Not                     | | **!** is used for logical negation. It inverts the value of a logical expression: **TRUE** becomes **FALSE**                                                                               |
+|                           | | `x <- TRUE`                                                                                                                                                                                |
+|                           | | `result <- !x`                                                                                                                                                                             |
+|                           | | `result`                                                                                                                                                                                   |
+|                           | | \[1\] FALSE                                                                                                                                                                                |
++---------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| %\<% and \|\> Pipes       | | `%<%` and `|>` are pipe operators from `dplyr` package used to pass the output of one function directly into another, which can help in creating a more clear and concise code.            |
+|                           | | `library(dplyr)`                                                                                                                                                                           |
+|                           | | `countries%>%`                                                                                                                                                                             |
+|                           | | `filter(Capital_city %in% "Addis Ababa") %>%`                                                                                                                                              |
+|                           | | `mutate(Region= "Eeast Afirca")`                                                                                                                                                           |
+|                           | | Without pipel                                                                                                                                                                              |
+|                           | | `filter`(`countries`, `Capital_city ="Addis Ababa"`)                                                                                                                                       |
++---------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| %IN% contained            | | `%in%  is used to determine if elements of one vector are contained in another vector`                                                                                                     |
+|                           | | `Example: x <- c(1, 2, 3, 4, 5)`                                                                                                                                                           |
+|                           | | `y <- c(3, 4, 5, 6, 7)`                                                                                                                                                                    |
+|                           | | `x %in% y`                                                                                                                                                                                 |
+|                           | | `[1] FALSE FALSE TRUE TRUE TRUE`                                                                                                                                                           |
++---------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+## Coding Basic Expression
+
+| Welcome to to your first R programming experience if it's your first time using R. In RStudio, you can write in two places: the console and R scripts.
+| R Console: This is where you can directly enter and run R commands:
+
+![R Console](images/console_write.png)
+
+| R Script is the source files (with a `.R` extension) where you can save your R code. To create an R script, got to the `File Menu` and select `New File > R Script`. This will open a fourth pane in RStudio for your script. Using R Scripts allows you to save your code and return it later. Let's get started! 📊
+
+```{r, maths_operation, eval=FALSE}
+1 + 1 # sum
+3^2 # sqrt
+3**2
+13%%2 #reminder/moduous
+8/4 # divided
+2*4 # multiplication
+```
+
+::: callout-important
+## Order of Operation
+
+Understanding the order of arithmetic operation in R is crucial. The order from highest to lowest:
+
+**Parenthesis:** `()`
+
+**Exponential:** `^`
+
+**Multiplication:** `*`
+
+**Division:** `/`
+
+**Addition:** `+`
+
+**Subtraction:** `-`
+:::
+
+Lets practice using these operations:
+
+```{r, order_of_operation, eval=FALSE}
+
+(1 + (2^2  * 4*8)) - (4/3) #what is the answer?
+
+```
+
+Mathematical functions:
+
+```{r, maths_ope, eval=FALSE}
+
+# natural logarithm
+log(1) 
+
+# base-10 logarithm
+log10(10) 
+
+# e^(1/2)
+exp(0.5) 
+```
+
+| Character operation: R can also work with text.
+| R uses the print function to display the variables
+| The function `paste` and `past0` used to format texts and variables together. For you challenge, what do you notice the difference between paste() and paste0() 
+
+```{r, text, eval=FALSE}
+
+print("Hello World")
+
+# assign variable
+greeting <- "Hello"
+name <- "Yalem"
+message <- paste(greeting, name) 
+message
+
+# paste0()
+message2 <- paste0(greeting, name)
+print(message2)
+
+# rep()
+rep("hello",10)
+```
+
+Logical operation: comparing things
+
+```{r, comparing, eval=FALSE}
+
+```
+
+## Variable assignment
+
+<div>
+
+In this scenario, we'll use malaria surveillance data to demonstrate variable declaration in R.
+
+Variables in R:
+
+-   A variable name must start with a letter.
+
+-   It can contain numbers, letters, underscores (\_), and periods (.).
+
+-   Variable names cannot start with a number or contain spaces.
+
+</div>
+
+```{r, act_as_doctor, eval=FALSE}
+name <- "Yalem"
+assessment <- "malaria"
+diagn <- "microscopy"
+result <- "Pf"
+
+# Create the message
+message <- paste(name, "'s result is ", result, " positive.", sep = "")
+print(message)
+
+```
+
+In R, the tradational methods of assigning a value to a variable is using the left arrow `<-`. For example:
+
+```{r, variable, eval=FALSE}
+x <-  2
+```
+
+Notice that assigning a value does not print it. Instead, the value is stored in a variable. To see the value, you need to call the variable.
+
+Let's see this in action:
+
+```{r, assign_number, eval=FALSE}
+# Assign a value to the variable 'tested'
+tested <- 420 
+
+# Display the value of 'tested'
+tested
+
+```
+
+### **Example: Calculating and Rounding a Ratio**
+
+```{r,calculate, eval=FALSE}
+
+positive = 284
+
+# ratio
+Test_positive <- positive/tested
+
+```
+
+The **`round()`** function rounds its first argument to the specified number of decimal places (default is 0). Use `?round` to see the documentation for the `round()` function.
+
+```{r, rounding, eval=FALSE}
+
+# round the result
+round(Test_positive,2) 
+?round
+```
+
+You can also assign date as a variable
+
+```{r, date_as_var, eval=FALSE}
+
+today = Sys.Date() 
+
+paste("Today is", today)
+```
+
+## Data types and structure
+
+## Installing packages
+
+## Getting Help in R
+
+## Importing and exploring data
+
+## Next - Basic data cleaning and manipulation in Tidyverse

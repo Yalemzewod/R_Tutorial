@@ -1,0 +1,58 @@
+---
+title: "Chapter 2: Data cleaning in R"
+author: 'Yalemzewod Gelaw'
+toc: true
+toc-depth: 2
+number-sections: false
+highlight-style: github
+format:
+  html:
+    self-contained: true
+    code-fold: true
+    code-summary: "Show the code"
+    code-tools: true
+    theme: united 
+knitr: 
+ opts_knit: 
+   warning: false
+   message: false
+editor: visual
+---
+
+## Data and System
+
+For this project we will use healthcare data collected from routine health service through [DHIS2](https://dhis2.org/ "DHIS2 is an open-source project a free and open-source software platform for the collection, reporting, analysis and dissemination of aggregate and individual-level data"), District Health Information Software. The data is on Leprosy surveillance system collected in Amhara Region, Ethiopia.
+
+Due to heterogeneity in nature of data journey, sources, methods of collection, and volume, public health data encounter a number of constraints which may influence its utilization.
+
+<div>
+
+These are sometime referred to as Data quality dimensions and may include but not limited to the following attributes:
+
+-   **Completeness** - captured but not reported;
+
+-   **Timeliness** - late reporting;
+
+-   **Availability** - captured, reported but not accessible for use;
+
+-   **Incomplete/poor recording** - some important variables or attributes not captured;
+
+-   **Consistency** - Always tells the similar fact/story;
+
+-   **Aggregated** - masked important information relevant for decision; and
+
+-   **Big data** - an *ambiguous* dimension.
+
+-   **Name mismatching** - miss spelled facility or area name
+
+Arguments that it is better to have *minimal useful data* in real time and best utilized than *lots of data* at a low speed and poorly utilized. Your choice! As the data grows bigger, more advanced skills and tools are required to manage it.
+
+</div>
+
+Package
+
+Sessions will cover in this tutorial are:
+
+1.  Explore the
+
+Let's start our practical session by inspecting how the data looks like

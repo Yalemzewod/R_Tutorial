@@ -1,0 +1,41 @@
+---
+title: "Introduction to R for Data Analysis Training Schedule"
+author: "Yalemzewod Gelaw"
+format: pdf
+---
+
++-----------------------------------------------------------+---------------+------------------------+
+| Content                                                   | Date          | Time                   |
++===========================================================+===============+========================+
+| Getting started installing R and RStudio                  | Before Friday | Any time before Friday |
++-----------------------------------------------------------+---------------+------------------------+
+| Tutorial 1: Introduction to RStudio and Basic Expressions | 24/05/2024    | 5:30 -- 7:00 PM AWST   |
++-----------------------------------------------------------+---------------+------------------------+
+| Tutorial 2: Data Exploration                              | 7/06/2024     | 5:30 -- 7:00 PM AWST   |
+|                                                           |               |                        |
+| -   Data manipulation using **`dplyr()`**                 |               |                        |
+|                                                           |               |                        |
+| -   Managing string data using **`stringr`** package      |               |                        |
+|                                                           |               |                        |
+| -   Data joining                                          |               |                        |
++-----------------------------------------------------------+---------------+------------------------+
+| Tutorial 3: Data Visualization in **`ggplot2`**           | 21/06/2024    | 5:30 -- 7:00 PM AWST   |
++-----------------------------------------------------------+---------------+------------------------+
+| Tutorial 4: Data Analysis in R                            | 05/07/2024    | 5:30 -- 7:00 PM AWST   |
+|                                                           |               |                        |
+| -   Basic statistics                                      |               |                        |
+|                                                           |               |                        |
+| -   Inferential statistics                                |               |                        |
+|                                                           |               |                        |
+| -   Predictive modeling                                   |               |                        |
++-----------------------------------------------------------+---------------+------------------------+
+| Tutorial 5: Spatial Analysis in R                         | 19/07/2024    | 5:30 -- 7:00 PM AWST   |
+|                                                           |               |                        |
+| -   Autocorrelation                                       |               |                        |
+|                                                           |               |                        |
+| -   INLA                                                  |               |                        |
++-----------------------------------------------------------+---------------+------------------------+
+
+::: {.callout-important appearance="simple"}
+Please note that the training will be delivered fortnightly, and the registrants are expected to install R and RStudio before the first tutorial. The guide to install the software and training resources will be shared with all registered attendants by Wednesday, 22/05/2024.
+:::
